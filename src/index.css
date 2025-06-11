@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --radius: 0.5rem;
+  }
+}
+@layer base {
+  body {
+    @apply text-foreground font-inter min-h-screen;
+    background: linear-gradient(135deg,
+      #450a0a 0%,
+      #7f1d1d 20%,
+      #b91c1c 40%,
+      #dc2626 60%,
+      #ea580c 80%,
+      #f59e0b 100%);
+    background-size: 350% 350%;
+    animation: gradientBurn 16s ease infinite;
+    background-attachment: fixed;
+  }
+
+  @keyframes gradientBurn {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-blue {
+    @apply bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-green {
+    @apply bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-orange {
+    @apply bg-gradient-to-r from-orange-400 via-red-500 to-yellow-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-purple {
+    @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply py-16 px-6 sm:px-8 lg:px-16;
+  }
+
+  .floating-card {
+    @apply transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/30;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  .solid-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .interactive-button {
+    @apply transform transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .skill-progress {
+    @apply w-full bg-white/10 rounded-full h-3 overflow-hidden shadow-inner;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .skill-progress-bar {
+    @apply h-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded-full transition-all duration-1000 ease-out;
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid #f59e0b;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f59e0b; }
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .simple-hover {
+    @apply transition-colors duration-200;
+  }
+
+  /* Enhanced background patterns */
+  .bg-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  }
+
+  .rainbow-border {
+    position: relative;
+    background: linear-gradient(45deg, #ff0081, #ff8c00, #40e0d0, #ff0081);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  .rainbow-border::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: inherit;
+  }
+}

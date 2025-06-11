@@ -20,7 +20,7 @@ const Hero = () => {
   const handleDownloadCV = () => {
   const link = document.createElement('a');
   link.href = '/Sandeep_cv_latest.pdf'; // Must match EXACT filename in public folder
-  link.download = 'Sandeep_Kumar_CV.pdf'; // Name you want the downloaded file to have
+  link.download = 'Sandeep_Kmbz_CV.pdf'; // Name you want the downloaded file to have
   // link.target = '_blank'; // Open in new tab as fallback
   document.body.appendChild(link);
   link.click();

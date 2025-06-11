@@ -89,7 +89,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="absolute mt-12  font-bold left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="absolute mt-8  font-bold left-1/2 transform -translate-x-1/2 animate-bounce">
             <ArrowDown className="h-8 w-6 font-semibold  text-yellow-400 cursor-pointer hover:scale-125 transition-transform" onClick={scrollToProjects} />
           </div>
         </div>

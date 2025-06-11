@@ -17,16 +17,18 @@ const Hero = () => {
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
-
   const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/Sandeep_cv_latest.pdf';
-    link.download = 'Sandeep_Kumar_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
+  const link = document.createElement('a');
+  link.href = '/Sandeep_cv_latest.pdf'; // Must match EXACT filename in public folder
+  link.download = 'Sandeep_Kumar_CV.pdf'; // Name you want the downloaded file to have
+  link.target = '_blank'; // Open in new tab as fallback
+  document.body.appendChild(link);
+  link.click();
+  setTimeout(() => {
     document.body.removeChild(link);
-  };
-
+    window.URL.revokeObjectURL(link.href);
+  }, 100);
+};
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] bg-gray-900 text-white">
       {/* Floating colorful elements */}

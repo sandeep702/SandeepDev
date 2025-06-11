@@ -12,7 +12,7 @@ const Projects = () => {
     {
       title: "Verma Flour Mill",
       description: "A modern, responsive e-commerce platform for digitizing traditional flour mill business with secure online payment integration.",
-      image: "/public/thumnail.png",
+      image: "/thumnail.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vue", "Supabase", "PostgreSQL", "Razorpay"],
       liveUrl: "https://verma-flour-mill-ux4e.onrender.com/",
       previewUrl: "https://verma-flour-mill-ux4e.onrender.com/",
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "Khaata-Chakki",
       description: "Full-stack application for flour mill operations with customer management, real-time status tracking, and analytics dashboard.",
-      image: "/public/thumnail1.png",
+      image: "/thumnail1.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vue", "Supabase", "PostgreSQL", "Lucide React"],
       liveUrl: "https://khaata-chakki.onrender.com/",
       previewUrl: "https://khaata-chakki.onrender.com/",
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       title: "SanChef Restaurant Platform",
       description: "Full-stack restaurant discovery platform with advanced filtering, real-time cart updates, and seamless ordering experience.",
-      image: "/public/thumnail3.png",
+      image: "/thumnail3.png",
       technologies: ["React", "JavaScript", "React Router", "Tailwind CSS", "Daily UI", "React Contact API"],
       liveUrl: "#",
       previewUrl: "#",
